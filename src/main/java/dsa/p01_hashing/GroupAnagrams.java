@@ -27,21 +27,17 @@ public class GroupAnagrams {
 
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> result = new HashMap<>();
-
         for (String str : strs) {
             String key = sorter(str);
             result.computeIfAbsent(key, value -> new ArrayList<>()).add(str);
         }
         return new ArrayList<>(result.values());
-
     }
-
 
     private static String sorter(String str) {
         char[] word = str.toCharArray();
         Arrays.sort(word);
-        String key = new String(word);
-        return key;
+        return new String(word);
     }
 
 
