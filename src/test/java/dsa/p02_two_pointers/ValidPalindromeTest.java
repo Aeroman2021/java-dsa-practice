@@ -12,4 +12,8 @@ class ValidPalindromeTest {
     @Test void digitAndLetter()  { assertFalse(sut.isPalindrome("0P")); }
     @Test void punctuationEnd()  { assertTrue(sut.isPalindrome("a.")); }
     @Test void mixedCase()       { assertTrue(sut.isPalindrome("No 'x' in Nixon")); }
+    @Test
+    void edgeCase(){
+        assertTrue(sut.isPalindrome(".,"));
+    }
 }

@@ -25,7 +25,7 @@ notes/               یادداشت‌های الگوها
 | پکیج | الگو | سطح | تعداد | وضعیت |
 |---|---|---|---|---|
 | `p01_hashing` | Hashing (HashMap / HashSet) | 1 | 5 | 🟢 باز |
-| `p02_two_pointers` | Two Pointers | 1 | 4 | 🔒 |
+| `p02_two_pointers` | Two Pointers | 1 | 4 | 🟢 باز|
 | `p03_sliding_window` | Sliding Window | 1 | 4 | 🔒 |
 | `p04_stack` | Stack / Monotonic Stack | 1 | 3 | 🔒 |
 | `p05_binary_search` | Binary Search | 1 | 3 | 🔒 |

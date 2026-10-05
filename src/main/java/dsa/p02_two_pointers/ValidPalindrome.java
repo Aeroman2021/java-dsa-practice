@@ -1,5 +1,7 @@
 package dsa.p02_two_pointers;
 
+import java.util.Objects;
+
 /**
  * LeetCode 125 - Valid Palindrome (Easy)
  * https://leetcode.com/problems/valid-palindrome/
@@ -21,12 +23,30 @@ package dsa.p02_two_pointers;
  *   ۲. دو اشاره‌گر از کجا شروع می‌کنن و با چه قانونی حرکت می‌کنن؟
  *   ۳. بعد کد بزن و تست رو اجرا کن.
  *
- * Time:  O(?)
- * Space: O(?)
+ * Time:  O(n)
+ * Space: O(1)
  */
 public class ValidPalindrome {
 
     public boolean isPalindrome(String s) {
-        throw new UnsupportedOperationException("TODO");
+        int leftIndex = 0;
+        int rightIndex = s.length() - 1;
+
+        while (leftIndex < rightIndex) {
+            while (leftIndex < rightIndex && !Character.isLetterOrDigit(s.charAt(leftIndex)))
+                leftIndex++;
+
+            while (leftIndex < rightIndex && !Character.isLetterOrDigit(s.charAt(rightIndex)))
+                rightIndex--;
+
+            if (!Objects.equals(s.toLowerCase().charAt(rightIndex),
+                    s.toLowerCase().charAt(leftIndex)))
+                return false;
+
+            leftIndex++;
+            rightIndex--;
+        }
+
+        return true;
     }
 }
