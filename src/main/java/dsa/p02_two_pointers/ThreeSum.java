@@ -26,8 +26,8 @@ import java.util.List;
  *   ۲. دو اشاره‌گر از کجا شروع می‌کنن و با چه قانونی حرکت می‌کنن؟
  *   ۳. بعد کد بزن و تست رو اجرا کن.
  *
- * Time:  O(?)
- * Space: O(?)
+ * Time:  O(n^2)
+ * Space: O(1)
  */
 public class ThreeSum {
 

@@ -19,8 +19,8 @@ package dsa.p02_two_pointers;
  *   ۲. دو اشاره‌گر از کجا شروع می‌کنن و با چه قانونی حرکت می‌کنن؟
  *   ۳. بعد کد بزن و تست رو اجرا کن.
  *
- * Time:  O(?)
- * Space: O(?)
+ * Time:  O(n)
+ * Space: O(1)
  */
 public class ContainerWithMostWater {
 
