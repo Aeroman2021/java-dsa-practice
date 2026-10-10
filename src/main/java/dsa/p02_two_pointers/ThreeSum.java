@@ -1,5 +1,8 @@
 package dsa.p02_two_pointers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -29,6 +32,27 @@ import java.util.List;
 public class ThreeSum {
 
     public List<List<Integer>> threeSum(int[] nums) {
-        throw new UnsupportedOperationException("TODO");
+
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(nums);
+
+        for (int i = 0; i < nums.length-1; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            int left = i +1;
+            int right = nums.length-1;
+            while (left < right) {
+                int sum = nums[left] + nums[right];
+                if (sum == -nums[i] ) {
+                    result.add(List.of(nums[left],nums[right],nums[i]));
+                    left++;
+                    right--;
+                }
+                if (sum > -nums[i]) right--;
+                if (sum < -nums[i]) left++;
+                while (left < right && nums[left] == nums[left - 1]) left++;
+            }
+
+        }
+        return result;
     }
 }
